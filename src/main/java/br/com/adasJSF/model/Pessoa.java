@@ -32,6 +32,7 @@ public class Pessoa implements Serializable{
 	public void setProfissao(String profissao) {
 		this.profissao = profissao;
 	}
+
 	@Override
 	public int hashCode() {
 		return Objects.hash(id);
@@ -47,6 +48,4 @@ public class Pessoa implements Serializable{
 		Pessoa other = (Pessoa) obj;
 		return id == other.id;
 	}
-	
-	
 }

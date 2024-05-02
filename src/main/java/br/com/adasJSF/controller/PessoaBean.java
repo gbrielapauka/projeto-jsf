@@ -23,12 +23,19 @@ public class PessoaBean implements Serializable {
 	
 	List<Pessoa> pessoas = new ArrayList<Pessoa>();
 	
+	private int idSequencia = 1;
+	
 	// Declaração dos métodos da Bean
 	public String adicionar() {
+		pessoa.setId(this.getIdSequenciaId());
 		pessoas.add(pessoa);
 		pessoa = new Pessoa();
-		System.out.println("Tamanho da lista: " + this.pessoas.size());
 		return null;
+	}
+	
+	private int getIdSequenciaId() {
+		//this.idSequencia++;
+		return this.idSequencia++;
 	}
 
 	public Pessoa getPessoa() {
